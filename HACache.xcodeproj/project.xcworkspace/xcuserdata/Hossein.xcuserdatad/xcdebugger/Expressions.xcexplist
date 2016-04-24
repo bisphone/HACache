@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[HAMemoryCache objectForKey:]:HAMemoryCache.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.keyToCacheNodeMap">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__38-[HACacheTests testPerformanceExample]_block_invoke:HACacheTests.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "testImage">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[HAMemoryCache setObject:forKey:]:HAMemoryCache.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.keyToCacheNodeMap">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
