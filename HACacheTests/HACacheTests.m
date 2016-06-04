@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "HAMemoryCache.h"
+#import "HAMemoryCache+ImageCache.h"
 
 ///// change this cache size , then you could check lru and mru clearing issues...
 const int CacheSize = 20000;//(Bytes)
@@ -44,6 +45,23 @@ const int CacheSize = 20000;//(Bytes)
     UIImage *cachedImage = [UIImage imageWithData:[_memCache objectForKey:key]];
     [self _assertImage:image isEqualImage:cachedImage];
     [expectation fulfill];
+    [self waitForExpectationsWithTimeout:3.0 handler:nil];
+}
+
+- (void)testFetchDataWithScale {
+    UIImage *image = [self _testImage];
+    NSString *key = @"key";
+    
+    [_memCache setObject:UIImagePNGRepresentation(image) forKey:key];
+    
+    for (int i=0; i < 5; i++) {
+        
+        XCTestExpectation *expectation = [self expectationWithDescription:@"read"];
+        UIImage *cachedImage = [_memCache imageForKey:key withSize:CGSizeMake(50, 50)];
+        [self _assertImage:cachedImage isEqualSize:CGSizeMake(50, 50)];
+        [expectation fulfill];
+    }
+    
     [self waitForExpectationsWithTimeout:3.0 handler:nil];
 }
 
@@ -114,6 +132,13 @@ const int CacheSize = 20000;//(Bytes)
                   img2.size.width * img2.scale);
     XCTAssertTrue(img1.size.height * img1.scale ==
                   img2.size.height * img2.scale);
+}
+
+- (void)_assertImage:(UIImage *)img isEqualSize:(CGSize)size {
+    
+    XCTAssertNotNil(img);
+    XCTAssertTrue(img.size.width == size.width*img.scale);
+    XCTAssertTrue(img.size.height == size.height*img.scale);
 }
 
 

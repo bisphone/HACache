@@ -10,7 +10,7 @@
 
 @class HALinkListNode;
 
-@interface HALinkList : NSObject
+@interface HADoublyLinkList : NSObject
 
 @property (nonatomic, readonly) NSUInteger length;
 @property (nonatomic, readonly) long long size;

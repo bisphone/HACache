@@ -5,7 +5,7 @@ HACache is a simple in-memory LRU cache. It evicts objects based on an LRU/MRU a
 HACache objects have the following features:
 
 * Least recently used objects(or most recently used objects) are evicted from the cache when the count/size limit is exceeded. eviction is disabled when **cacheEvictionRule** set as `CacheEviction_DISABLE`.
-* LRU(or MRU) algorithm was implemented by using Link List for best performance result.
+* LRU(or MRU) algorithm was implemented by using Doubly LinkList for best performance result.
 * The cache is thread-safe, so you can add, remove, and query items in the cache from different threads without having to lock the cache yourself.
 
 ### Usage: ###
@@ -30,4 +30,17 @@ read from cache memory with this:
 `- (id) objectForKey:(NSString *)key;`  
 If no key is found, nil is return.
 
+now with `HAMemoryCache + ImageCache` category , you could keep the light version of images in memory and use your memory space more efficiency.  
+in order to write in memory you could use `- (UIImage *)setImageData:(NSData *)imageData WithSize:(CGSize)size forKey:(NSString *)key;`
+
+and for read from memory: `- (UIImage *)imageForKey:(NSString *)key withSize:(CGSize)size`
+
+**using** `HAMemoryCache + ImageCache` **category highly recommended if you have a list of images like galleries , ...**  
+
 also remove object from memory cache with `removeObjectForKey` and in state of **didReceiveMemoryWarning** use `removeAllObjects`
+
+
+### Testing: ###
+I wrote some simple tests for this component functionality test , so you could test the component simply by `COMMAND + U`
+
+

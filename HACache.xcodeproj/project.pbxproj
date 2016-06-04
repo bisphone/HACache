@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9495E8991D02B09F004D6F16 /* HAMemoryCache+ImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 9495E8971D02B09F004D6F16 /* HAMemoryCache+ImageCache.h */; };
+		9495E89A1D02B09F004D6F16 /* HAMemoryCache+ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9495E8981D02B09F004D6F16 /* HAMemoryCache+ImageCache.m */; };
 		94CDE4C01CC9309600AD6979 /* HACache.h in Headers */ = {isa = PBXBuildFile; fileRef = 94CDE4BF1CC9309600AD6979 /* HACache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94CDE4C71CC9309600AD6979 /* HACache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94CDE4BC1CC9309600AD6979 /* HACache.framework */; };
 		94CDE4CC1CC9309600AD6979 /* HACacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CDE4CB1CC9309600AD6979 /* HACacheTests.m */; };
 		94CDE4D81CC930E300AD6979 /* HAMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 94CDE4D61CC930E300AD6979 /* HAMemoryCache.h */; };
 		94CDE4D91CC930E300AD6979 /* HAMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CDE4D71CC930E300AD6979 /* HAMemoryCache.m */; };
-		94CDE4DC1CC9312B00AD6979 /* HALinkList.h in Headers */ = {isa = PBXBuildFile; fileRef = 94CDE4DA1CC9312B00AD6979 /* HALinkList.h */; };
-		94CDE4DD1CC9312B00AD6979 /* HALinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CDE4DB1CC9312B00AD6979 /* HALinkList.m */; };
+		94CDE4DC1CC9312B00AD6979 /* HADoublyLinkList.h in Headers */ = {isa = PBXBuildFile; fileRef = 94CDE4DA1CC9312B00AD6979 /* HADoublyLinkList.h */; };
+		94CDE4DD1CC9312B00AD6979 /* HADoublyLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CDE4DB1CC9312B00AD6979 /* HADoublyLinkList.m */; };
 		94EDF3DC1CCBD941008FBCE5 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 94EDF3DA1CCBD7E4008FBCE5 /* blue.png */; };
 		94EDF3DD1CCBDA46008FBCE5 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 94EDF3DA1CCBD7E4008FBCE5 /* blue.png */; };
 /* End PBXBuildFile section */
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9495E8971D02B09F004D6F16 /* HAMemoryCache+ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HAMemoryCache+ImageCache.h"; sourceTree = "<group>"; };
+		9495E8981D02B09F004D6F16 /* HAMemoryCache+ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HAMemoryCache+ImageCache.m"; sourceTree = "<group>"; };
 		94CDE4BC1CC9309600AD6979 /* HACache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HACache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CDE4BF1CC9309600AD6979 /* HACache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HACache.h; sourceTree = "<group>"; };
 		94CDE4C11CC9309600AD6979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,8 +41,8 @@
 		94CDE4CD1CC9309600AD6979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94CDE4D61CC930E300AD6979 /* HAMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAMemoryCache.h; sourceTree = "<group>"; };
 		94CDE4D71CC930E300AD6979 /* HAMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAMemoryCache.m; sourceTree = "<group>"; };
-		94CDE4DA1CC9312B00AD6979 /* HALinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALinkList.h; sourceTree = "<group>"; };
-		94CDE4DB1CC9312B00AD6979 /* HALinkList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALinkList.m; sourceTree = "<group>"; };
+		94CDE4DA1CC9312B00AD6979 /* HADoublyLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HADoublyLinkList.h; sourceTree = "<group>"; };
+		94CDE4DB1CC9312B00AD6979 /* HADoublyLinkList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HADoublyLinkList.m; sourceTree = "<group>"; };
 		94EDF3DA1CCBD7E4008FBCE5 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,8 +90,10 @@
 				94CDE4C11CC9309600AD6979 /* Info.plist */,
 				94CDE4D61CC930E300AD6979 /* HAMemoryCache.h */,
 				94CDE4D71CC930E300AD6979 /* HAMemoryCache.m */,
-				94CDE4DA1CC9312B00AD6979 /* HALinkList.h */,
-				94CDE4DB1CC9312B00AD6979 /* HALinkList.m */,
+				9495E8971D02B09F004D6F16 /* HAMemoryCache+ImageCache.h */,
+				9495E8981D02B09F004D6F16 /* HAMemoryCache+ImageCache.m */,
+				94CDE4DA1CC9312B00AD6979 /* HADoublyLinkList.h */,
+				94CDE4DB1CC9312B00AD6979 /* HADoublyLinkList.m */,
 			);
 			path = HACache;
 			sourceTree = "<group>";
@@ -109,8 +115,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9495E8991D02B09F004D6F16 /* HAMemoryCache+ImageCache.h in Headers */,
 				94CDE4C01CC9309600AD6979 /* HACache.h in Headers */,
-				94CDE4DC1CC9312B00AD6979 /* HALinkList.h in Headers */,
+				94CDE4DC1CC9312B00AD6979 /* HADoublyLinkList.h in Headers */,
 				94CDE4D81CC930E300AD6979 /* HAMemoryCache.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +220,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94CDE4DD1CC9312B00AD6979 /* HALinkList.m in Sources */,
+				9495E89A1D02B09F004D6F16 /* HAMemoryCache+ImageCache.m in Sources */,
+				94CDE4DD1CC9312B00AD6979 /* HADoublyLinkList.m in Sources */,
 				94CDE4D91CC930E300AD6979 /* HAMemoryCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

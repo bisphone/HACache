@@ -7,7 +7,7 @@
 //
 
 #import "HAMemoryCache.h"
-#import "HALinkList.h"
+#import "HADoublyLinkList.h"
 
 
 @interface HAMemoryCache ()
@@ -20,7 +20,7 @@
 /** @property orderedEntries
  *  @brief cache data strcuture. The front is the most recently accessed and tail is the least.
  **/
-@property (nonatomic, strong) HALinkList *cacheList;
+@property (nonatomic, strong) HADoublyLinkList *cacheList;
 
 @end
 
@@ -32,7 +32,7 @@
         self.size = size;
         self.capacity = -1;
         self.keyToCacheNodeMap = [[NSMutableDictionary alloc] init];
-        self.cacheList = [HALinkList new];
+        self.cacheList = [HADoublyLinkList new];
         self.cacheEvictionRule = cm;
     }
     return self;
@@ -45,7 +45,7 @@
         self.capacity = capacity;
         self.size = -1;
         self.keyToCacheNodeMap = [[NSMutableDictionary alloc] initWithCapacity:self.capacity];
-        self.cacheList = [HALinkList new];
+        self.cacheList = [HADoublyLinkList new];
         self.cacheEvictionRule = cm;
     }
     return self;
@@ -92,7 +92,7 @@
 -(void)removeAllObjects {
     
     @synchronized(self) {
-        self.cacheList = [HALinkList new];
+        self.cacheList = [HADoublyLinkList new];
         [self.keyToCacheNodeMap removeAllObjects];
     }
 }

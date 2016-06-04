@@ -6,16 +6,16 @@
 //  Copyright © 2016 Hossein Asgari. All rights reserved.
 //
 
-#import "HALinkList.h"
+#import "HADoublyLinkList.h"
 
-@interface HALinkList ()
+@interface HADoublyLinkList ()
 
 @property (nonatomic, readwrite) NSUInteger length;
 @property (nonatomic, readwrite) long long size;
 
 @end
 
-@implementation HALinkList
+@implementation HADoublyLinkList
 
 - (instancetype) init {
     self = [super init];
